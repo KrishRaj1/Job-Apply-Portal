@@ -6,7 +6,7 @@ const applyRoute = require("./Routes/jobSeeker")
 const resumeCollection = require("./Routes/hrDashBoard")
 const mongoose = require("mongoose")
 const PORT = 9000
-mongoose.connect("mongodb+srv://shivharekrishraj:"+process.env.KEY+"@cluster0.nofsvmo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", 
+mongoose.connect("mongodb+srv://shivharekrishraj:"+process.env.KEY+"@cluster0.nofsvmo.mongodb.net/Job?retryWrites=true&w=majority&appName=Cluster0", 
 {
    useNewUrlParser : true,
    useUnifiedTopology : true,
