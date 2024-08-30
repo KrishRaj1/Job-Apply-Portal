@@ -23,7 +23,7 @@ export const Form = () => {
     formData.append("resume", document.getElementById("resumeInput").files[0]); // Assuming the input has id "resumeInput"
 
     try {
-      const response = await fetch(`${backendUrl}/apply/user`, {
+      const response = await fetch(`https://job-apply-portal.vercel.app/apply/user`, {
         method: "POST",
         body: formData,
       });
