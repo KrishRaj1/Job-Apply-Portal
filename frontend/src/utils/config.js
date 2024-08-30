@@ -1,1 +1,1 @@
-export const backendUrl = "http://localhost:9000"
+export const backendUrl = "https://job-apply-portal.vercel.app/"
