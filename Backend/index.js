@@ -17,7 +17,12 @@ mongoose.connect("mongodb+srv://shivharekrishraj:"+process.env.KEY+"@cluster0.no
 }).catch((err) => {
     console.log("MongoDB is not connected")
 })
-app.use(cors())
+app.use(cors(
+ { origin : ["https://deploy-mern-job-portal-9rfs.vercel.app"],
+  method : ["POST","GET"],
+  credentials : true
+ }
+))
 app.use(express.json())
 app.get('/' , (req,res)=> {
     res.send("This is home")
