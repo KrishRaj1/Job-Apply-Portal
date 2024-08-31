@@ -19,12 +19,12 @@ mongoose.connect("mongodb+srv://shivharekrishraj:"+process.env.KEY+"@cluster0.no
 })
 const allowedOrigins = ['https://job-apply-portal-yrqp.vercel.app'];
 
-app.use(cors());
-// {
-  // origin: allowedOrigins,
-  // methods: ['GET', 'POST'],
-  // allowedHeaders: ['Content-Type'],
-// }
+app.use(cors({
+   origin: 'https://job-apply-portal-yrqp.vercel.app',
+   methods: ['GET', 'POST'],
+   allowedHeaders: ['Content-Type'],
+ }));
+ 
 app.use(express.json())
 app.get('/' , (req,res)=> {
     res.send("This is home")
